@@ -1,13 +1,26 @@
 :root {
+/* Colors */
     --main-color: blue;
+    --second-color: orange;
     --shaded-color: red;
     --active-color: black;
     --title-fontcolor: white;
+
+    /* Navigation */
+    --nav-atb: 16px;
+    --nav-height: 50px;
+    --nav-width: 84%;
+
+    /* Aside menu */
+    --aside-width: 16%
 }
+
+/* Whole page*/
 
 body {
     margin: 6px;
-    margin-top: 55px;
+    margin-top: calc(var(--nav-height) + 5px);
+    margin-right: calc(var(--aside-width) + 1%);
 }
 
 /* Navigation menu */
@@ -16,9 +29,10 @@ nav ul {
     position: fixed;
     list-style-type: none;
     background-color: var(--main-color);
+    height: var(--nav-height);
     top: 0;
-    right: 0;
-    width: 100%;
+    left: 0;
+    width: var(--nav-width);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -33,26 +47,21 @@ nav a {
     background-color: var(--main-color);
     color: var(--title-fontcolor);
     text-decoration: none;
-    padding: 16px;
+    padding: var(--nav-atb) 55px;
+    transition: 0.5s;
 }
 
 nav a:hover {
     background: var(--shaded-color);
+    padding: var(--nav-atb) 60px var(--nav-atb) 60px;
 }
 
 nav a:active {
     background: var(--active-color);
 }
 
-nav img {
-    max-height: 37px;
-    position: absolute;
-    right: 56px;
-    margin-top: 6px;
-}
-
 .currentpage {
-    background-color: var(--active-color);
+  background-color: var(--active-color);
 }
 
 /* side link menu */
@@ -60,11 +69,12 @@ nav img {
 aside ul {
     position: fixed;
     list-style-type: none;
-    background-color: var(--main-color);
+    background-color: var(--second-color);
+    height: 100%;
+    width: var(--aside-width);
     top: 0;
     right: 0;
     margin: 0;
-    margin-top: 49px;
     padding: 0;
     overflow: hidden;
 }
@@ -72,4 +82,22 @@ aside ul {
 aside a {
     color: var(--title-fontcolor);
     text-decoration: none;
+}
+
+#hzimg {
+    max-height: 37px;
+}
+
+#hzimgback {
+    background-color: var(--main-color);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile */
+
+.profileimg {
+    max-height: 110px;
 }

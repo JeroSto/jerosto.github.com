@@ -1,26 +1,44 @@
 :root {
 /* Colors */
-    --main-color: blue;
-    --second-color: orange;
-    --shaded-color: red;
-    --active-color: black;
+    --main-color: #CC71DC;
+    --second-color: #D489E2;
+    --shaded-color: #962AA9;
+    --active-color: #BA41CF;
     --title-fontcolor: white;
+    --main-fontcolor: #FAFDF9;
+
+    /* Body */
+    --margin-top-body: 0px;
+    --margin-right-body: 0.3%;
 
     /* Navigation */
-    --nav-atb: 16px;
     --nav-height: 50px;
     --nav-width: 84%;
+    --nav-a-width: 190px;
 
-    /* Aside menu */
-    --aside-width: 16%
+    /* Home */
+    --homeintroimg-width: 1700px;
 }
 
-/* Whole page*/
+/* Whole page layout */
+
+html {
+    width: 100%;
+    height: 100%;
+    background-size: 1200% 1200%;
+    animation: rainbow 15s ease infinite;
+}
 
 body {
-    margin: 6px;
-    margin-top: calc(var(--nav-height) + 5px);
-    margin-right: calc(var(--aside-width) + 1%);
+    margin-left: 0;
+    margin-top: calc(var(--nav-height) + var(--margin-top-body));
+    margin-right: calc(100% - var(--nav-width) + var(--margin-right-body));
+}
+
+/* Whole page text */
+
+h1, h2, h3, h4, p, li, table, label, details {
+    color: var(--main-fontcolor);
 }
 
 /* Navigation menu */
@@ -43,17 +61,20 @@ nav li {
 }
 
 nav a {
-    display: block;
+    display: flex;
     background-color: var(--main-color);
     color: var(--title-fontcolor);
     text-decoration: none;
-    padding: var(--nav-atb) 55px;
+    width: var(--nav-a-width);
+    height: var(--nav-height);
     transition: 0.5s;
+    align-items: center;
+    justify-content: center;
 }
 
 nav a:hover {
     background: var(--shaded-color);
-    padding: var(--nav-atb) 60px var(--nav-atb) 60px;
+    width: calc(var(--nav-a-width) + 9px);
 }
 
 nav a:active {
@@ -71,7 +92,7 @@ aside ul {
     list-style-type: none;
     background-color: var(--second-color);
     height: 100%;
-    width: var(--aside-width);
+    width: calc(100% - var(--nav-width));
     top: 0;
     right: 0;
     margin: 0;
@@ -86,6 +107,18 @@ aside a {
 
 #hzimg {
     max-height: 37px;
+    position: relative;
+}
+
+#gnomed {
+    max-height: 30px;
+    position: absolute;
+    right: 163px;
+    top: 7px;
+}
+
+#hzimg:hover {
+    animation: threedvertspin 3s;
 }
 
 #hzimgback {
@@ -96,8 +129,73 @@ aside a {
     justify-content: center;
 }
 
+/* Home */
+
+#homeintroimg {
+    background-image: url("images/matrix.gif");
+    width: calc(var(--nav-width) + 17%);
+    height: 400px;
+    text-align: center;
+}
+
+#gradientimgtopage {
+    background: linear-gradient(0deg, #00000000, black);
+    width: calc(var(--nav-width) + 17%);
+    height: 50px;
+}
+
 /* Profile */
 
 .profileimg {
     max-height: 110px;
+}
+
+/* FAQ */
+
+#faqdetails a {
+    text-decoration: none;
+    color: var(--main-fontcolor);
+}
+
+/* Blog */
+
+#blognav li {
+    list-style-type: none;
+}
+
+#blognav a {
+    color: var(--main-fontcolor);
+}
+
+#returntoblog a {
+    color: var(--main-fontcolor);
+}
+
+/* Animations */
+
+@keyframes threedvertspin {
+    from {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(0, 1, 0, -360deg);
+    }
+}
+
+@keyframes rainbow { 
+    0% {
+        background: #70DB92;
+    }
+    25% {
+        background: #70C4A2;
+    }
+    50% {
+        background: #87d88c;
+    }
+    75% {
+        background: #70C4A2;
+    }
+    100% {
+        background: #70DB92;
+    }
 }

@@ -12,7 +12,7 @@ This is a webpage for my school.
 [] add at least 2 pictures
 
 ### Profile
-[] fix profile page content
+[x] fix profile page content
 [x] add more personal info to profile
 
 ### Dashboard
@@ -20,7 +20,7 @@ This is a webpage for my school.
 
 ### FAQ
 [x] add questions
-[] add answers
+[x] add answers
 
 ### Blog
 [] add blog content

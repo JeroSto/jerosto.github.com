@@ -24,3 +24,7 @@ This is a webpage for my school.
 
 ### Blog
 [] add blog content
+
+### Usability
+[] make sure every image has an alt text
+[] all the abbreviations have an abbr element

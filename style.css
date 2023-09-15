@@ -158,7 +158,7 @@ aside a {
     position: relative;
     top: 11vw;
     color: var(--title-fontcolor);
-    font-family: fantasy;
+    font-family: serif;
 }
 
 #gradientimgtopage {
@@ -168,7 +168,7 @@ aside a {
 }
 
 #hometextsection {
-    font-family: fantasy;
+    font-family: serif;
     text-align: center;
 }
 

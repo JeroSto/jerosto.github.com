@@ -1,9 +1,11 @@
 :root {
     /* Colors */
-    --main-color: #CC71DC;
-    --second-color: #D489E2;
-    --shaded-color: #962AA9;
-    --active-color: #BA41CF;
+    --main-color: #D96CEC;
+    --sub-color: #e37ef4;
+    --second-color: #ED8FFF;
+    --shaded-color: #a81dc0;
+    --current-color: #b831c4;
+    --active-color: #a61cb3;
 
     --nav-fontcolor: white;
     --main-fontcolor: #FAFDF9;
@@ -14,7 +16,7 @@
     --margin-right-body: 0.3%;
 
     /* Navigation */
-    --nav-height: 50px;
+    --nav-height: 10vh;
     --nav-width: 86%;
     --nav-a-width: 14vw;
     --nav-a-fontsize: 1.5vw;
@@ -87,8 +89,8 @@ nav a:active {
     background: var(--active-color);
 }
 
-.currentpage {
-  background-color: var(--active-color);
+.currentPage {
+  background-color: var(--current-color);
 }
 
 /* side link menu */
@@ -107,13 +109,40 @@ aside ul {
     z-index: 500;
 }
 
+
 aside a {
     color: var(--nav-fontcolor);
     text-decoration: none;
 }
 
+.asideText {
+    display: flex;
+    background: var(--sub-color);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.3vh;
+    padding: 5vh 0 5vh 0;
+    margin-bottom: 2vh;
+    transition: 0.5s;
+    font-size: calc(0.5vw + 0.5vh);
+}
+
+.asideText:hover {
+    background: var(--shaded-color);
+    padding: calc(4.8vh + 6px) 0 calc(4.8vh + 6px) 0;
+    font-weight: 420;
+}
+
+.asideText:active {
+    background: var(--active-color);
+}
+
 #hzimg {
-    max-height: 2cqi;
+    max-height: 3cqw;
+    max-width: 11cqw;
+    height: 5vh;
+    min-height: 1vh;
     position: relative;
 }
 
@@ -123,13 +152,6 @@ aside a {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#gnomed {
-    max-height: 30px;
-    position: absolute;
-    right: 163px;
-    top: 7px;
 }
 
 #hzimg:hover {

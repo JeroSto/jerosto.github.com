@@ -40,8 +40,6 @@ body {
     margin-right: calc(100% - var(--nav-width) + var(--margin-right-body));
 }
 
-/* Whole page text */
-
 h1, h2, h3, h4, p, li, table, label, details {
     color: var(--main-fontcolor);
 }
@@ -189,7 +187,7 @@ aside a {
     height: 50px;
 }
 
-#hometextsection {
+#homeTextSection {
     font-family: serif;
     text-align: center;
 }
@@ -200,7 +198,39 @@ aside a {
     max-height: 110px;
 }
 
+#profileTextSection {
+    text-align: center;
+    justify-content: center;
+}
+
+#profileTextSection table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profileTextSection li {
+    list-style-type: none;
+}
+
+/* Dashboard */
+
+#dashboardTextSection table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#progressBar {
+    position: relative;
+    left: calc(25vw - 6cqw);
+}
+
 /* FAQ */
+
+#faqTextSection {
+    position: relative;
+    top: 2vh;
+    left: calc(6vw - 5cqw);
+}
 
 #faqdetails a {
     text-decoration: none;
@@ -208,6 +238,11 @@ aside a {
 }
 
 /* Blog */
+
+#blogTextSection {
+    position: relative;
+    top: 2vh;
+}
 
 #blognav li {
     list-style-type: none;

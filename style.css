@@ -13,7 +13,7 @@
 
     /* Body */
     --margin-top-body: 0px;
-    --margin-right-body: 0.3%;
+    --margin-right-body: 0.5%;
 
     /* Navigation */
     --nav-height: 10vh;
@@ -221,7 +221,11 @@ aside a {
 
 #progressBar {
     position: relative;
-    left: calc(25vw - 6cqw);
+    left: calc(17cqw - 9vw);
+}
+
+#progressBar label {
+    font-size: 2vw;
 }
 
 /* FAQ */
@@ -254,6 +258,10 @@ aside a {
 
 #returntoblog a {
     color: var(--main-fontcolor);
+}
+
+.blogPost {
+    margin-left: 1vw;
 }
 
 /* Animations */
